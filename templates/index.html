@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-   scale=1.0" />
+    <title>Fake News Classifier</title>
+  </head>
+
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to top left, #4a148c, #c51162);
+      background-repeat: cover;
+      height: 100vh;
+      color: white;
+    "
+  >
+    <div
+      class="formContainer"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        border-radius: 8px 8px;
+        height: 80vh;
+        width: 20vw;
+        font-family: 'Roboto', sans-serif;
+      "
+    >
+      <h1>Fake News with Naïve Bayes Classifier</h1>
+      <form action="/predict" method="post">
+        <textarea
+          name="news"
+          placeholder="Enter News Text"
+          style="width: 30em; height: 20em; margin-bottom: 2em"
+        ></textarea>
+
+        <input
+          type="submit"
+          value="Submit"
+          style="
+            background: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            padding: 2vh;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px 4px;
+          "
+        />
+        <br />
+        <br />
+        <h1>{{ prediction_text }}</h1>
+      </form>
+    </div>
+  </body>
+</html>
